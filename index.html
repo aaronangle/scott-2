@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Vote Bennett</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="align">
+            <img src="./assets/Capture2.JPG" alt="Vote Bennett" class="logo">
+            <div class="spacer"></div>
+        </div>
+        <div class="">
+            <a href="https://www.facebook.com/voteBennett2020"> <img src="./assets/facebook.png" alt=""></a>
+            <a href="https://twitter.com/scottie_walker"><img src="./assets/twitter.png" alt=""></a>
+            <a href=""><img src="./assets/envelope.png" alt=""></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="layer">
+            <div class="title">
+                <h1 class="big">L. SCOTT </h1>
+                <h1 class="big">BENNETT </h1>
+                <div class="lead-line">
+                    <h4 class="small">For County Attorney </h4>
+                    <div class="lead"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="blue-box">
+            <h2 class="white">Experience Matters</h2>
+            <div class="button-line">
+                <h5 class="button">Trusted</h5>
+                <h5 class="button">Experienced</h5>
+                <h5 class="button">Diligent</h5>
+            </div>
+        </div>
+        <div class="text">
+            <p>It's one of those things I suppose I've always known: Gila Valley is in my DNA. My grandfather Cleo
+                Crockett was born and raised in Pima my grandmother Mary "Mamie" Layton Crockett grew up in Safford and
+                my mother Kleis Crockett Bennett was born here.</p>
+
+            <p>Naturally, when I had the opportunity almost 10 years ago to come here as the Chief Deputy County
+                Attorney for Graham County, my only decision was what to pack first. Although I was born in Provo, Utah,
+                and had worked in Maricopa and Pinal Counties as a prosecutor for some years, somehow this felt like
+                coming home.</p>
+        </div>
+    </div>
+    <script>
+        const elements = document.querySelectorAll(".button");
+
+        const animate = element => (
+            element.classList.add("animate")
+        );
+
+        const isAnimated = element => (
+            element.classList.contains("animate")
+        );
+
+        const intersectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                console.log(entry.intersectionRatio)
+                // when element's is in viewport,
+                // animate it!
+
+
+                if (entry.intersectionRatio > 0) {
+                    animate(entry.target);
+                    // remove observer after animation
+                    observer.unobserve(entry.target);
+                }
+
+            });
+        });
+
+        // get only these elements,
+        // which are not animated yet
+
+
+
+        // start observing your elements
+        elements.forEach((element) => intersectionObserver.observe(element));
+    </script>
+</body>
+
+</html>
