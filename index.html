@@ -32,15 +32,16 @@
                     <div class="lead"></div>
                 </div>
             </div>
+            <img src="./assets/family-no-background.png" alt="" class="fam-pic">
         </div>
     </div>
     <div class="content">
         <div class="blue-box">
             <h2 class="white">Experience Matters</h2>
             <div class="button-line">
-                <h5 class="button">Trusted</h5>
-                <h5 class="button">Experienced</h5>
-                <h5 class="button">Diligent</h5>
+                <h5 class="button">Experience</h5>
+                <h5 class="button">Issues</h5>
+                <h5 class="button">We Like Scott</h5>
             </div>
         </div>
         <div class="text">
@@ -56,37 +57,21 @@
     </div>
     <script>
         const elements = document.querySelectorAll(".button");
-
         const animate = element => (
             element.classList.add("animate")
         );
-
         const isAnimated = element => (
             element.classList.contains("animate")
         );
-
         const intersectionObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
-                console.log(entry.intersectionRatio)
-                // when element's is in viewport,
-                // animate it!
-
-
                 if (entry.intersectionRatio > 0) {
                     animate(entry.target);
-                    // remove observer after animation
                     observer.unobserve(entry.target);
                 }
 
             });
         });
-
-        // get only these elements,
-        // which are not animated yet
-
-
-
-        // start observing your elements
         elements.forEach((element) => intersectionObserver.observe(element));
     </script>
 </body>

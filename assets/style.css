@@ -18,6 +18,9 @@ html, body{
     align-items: center;
     padding: 0 40px;
 }
+.fam-pic{
+    display: none;
+}
 .align{
     display: flex;
     flex-direction: row; 
@@ -132,7 +135,7 @@ html, body{
         width: 90%
     }
     .layer{
-    background-color: rgba(143, 143, 143, 0.7);
+    background-color: rgba(226, 226, 226, 0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -201,5 +204,19 @@ html, body{
     }
     .container{
     background-image: url("./light-bg.jpg");
+    }
+    .layer{
+        background-color: rgba(143, 143, 143, 0.0);
+    }
+    .title{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .fam-pic{
+        display: block;
+        width: 400px;
+    }
+    .logo{
+        width: 180px;
     }
   }
