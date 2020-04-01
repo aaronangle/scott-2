@@ -31,7 +31,7 @@ html, body{
     background-color: black;
 }
 .container{
-    height: 100vh;
+    height: calc(100vh - 120px);
     /* background-color: #c6ccd8; */
     background-image: url("./bg4.JPG");
     position: relative;
@@ -96,15 +96,21 @@ html, body{
     padding: 1.1em 2em;
     margin: 10px;
     font-size: 18px;
+    border: none;
     opacity: 0;
-    transition: 3s;
+    transition: 1s;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #c00a32;
 }
 .animate{
     opacity: 1;
     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 .text{
-    width: 70%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -132,7 +138,8 @@ html, body{
   }
 @media only screen and (max-width: 1000px) {
     .text{
-        width: 90%
+        width: 90%;
+        flex-direction: column;
     }
     .layer{
     background-color: rgba(226, 226, 226, 0.7);
@@ -148,6 +155,9 @@ html, body{
     .blue-box{
         width:90%;
     }
+    .smaller{
+        font-size: 14px;
+    }
   }
   @media only screen and (max-width: 752px){
     .blue-box{
@@ -158,9 +168,6 @@ html, body{
     }
   }
   @media only screen and (max-width: 700px){
-    .text{
-        flex-direction: column;
-    }
     .text p{
         margin-bottom: 10px;
     }
